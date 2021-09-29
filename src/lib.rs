@@ -1,7 +1,7 @@
 use anyhow::Result;
 use chrono::NaiveDateTime;
 use noisy_float::prelude::*;
-use serde::{de::Error as _, ser::Error as _, Deserialize, Deserializer, Serialize, Serializer};
+use serde::{de::Error as _, Deserialize, Deserializer, Serialize, Serializer};
 use std::path::PathBuf;
 
 #[derive(Debug, Clone, PartialEq, Eq, Hash, Serialize, Deserialize)]
