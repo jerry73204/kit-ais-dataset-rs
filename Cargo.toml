@@ -1,6 +1,6 @@
 [package]
 name = "kit-ais-dataset"
-description =""
+description = "Data types and loader for KIT AIS data set"
 version = "0.1.0"
 authors = ["jerry73204 <jerry73204@gmail.com>"]
 edition = "2021"
