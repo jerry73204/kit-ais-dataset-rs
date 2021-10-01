@@ -18,5 +18,7 @@ noisy_float = { version = "0.2.0", features = ["serde"] }
 serde = { version = "1.0.130", features = ["derive"] }
 serde-xml-rs = "0.5.0"
 
-# [dev-dependencies]
-# glob = "0.3.0"
+[dev-dependencies]
+anyhow = "1.0.44"
+opencv = "0.54.0"
+structopt = "0.3.23"
