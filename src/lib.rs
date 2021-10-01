@@ -1,4 +1,3 @@
-use anyhow::Result;
 use chrono::NaiveDateTime;
 use noisy_float::prelude::*;
 use serde::{de::Error as _, Deserialize, Deserializer, Serialize, Serializer};
@@ -20,7 +19,7 @@ pub struct Frame {
     pub utc: NaiveDateTime,
     pub color: Option<Color>,
     pub depth: Option<Depth>,
-    pub gsd: R64,
+    pub gsd: Option<R64>,
     pub x: R64,
     pub y: R64,
     pub lat: R64,
@@ -137,21 +136,3 @@ mod serde_zero_one_bool {
         Ok(value)
     }
 }
-
-// #[cfg(test)]
-// mod tests {
-//     use super::*;
-
-//     #[test]
-//     fn dataset_test() -> Result<()> {
-//         let dir = "/mnt/bbf98471-db16-4e2e-99df-ccd245253072/kit-ais-dataset/Training Data Set/StuttgartCrossroad01";
-
-//         for path in glob::glob(&format!("{}/*.xml", dir))? {
-//             let path = path?;
-//             let text = std::fs::read_to_string(path)?;
-//             let _: Dataset = serde_xml_rs::from_str(&text)?;
-//         }
-
-//         Ok(())
-//     }
-// }
