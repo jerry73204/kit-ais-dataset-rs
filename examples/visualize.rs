@@ -1,13 +1,13 @@
 use anyhow::{format_err, Result};
+use clap::Parser;
 use kit_ais_dataset::Dataset;
 use opencv::{core as core_cv, highgui, imgcodecs, imgproc};
 use std::{
     fs,
     path::{Path, PathBuf},
 };
-use structopt::StructOpt;
 
-#[derive(StructOpt)]
+#[derive(Parser)]
 /// Visualize KIT AIS data images with bounding boxes.
 struct Opts {
     /// Data set directory.
@@ -24,7 +24,7 @@ fn main() -> Result<()> {
         dataset_dir,
         output_dir,
         no_gui,
-    } = Opts::from_args();
+    } = Opts::parse();
 
     fs::create_dir_all(&output_dir)?;
 
