@@ -13,12 +13,12 @@ license = "MIT"
 readme = "README.md"
 
 [dependencies]
-chrono = "0.4.19"
+chrono = "0.4.31"
 noisy_float = { version = "0.2.0", features = ["serde"] }
-serde = { version = "1.0.130", features = ["derive"] }
-serde-xml-rs = "0.5.0"
+serde = { version = "1.0.193", features = ["derive"] }
+serde-xml-rs = "0.6.0"
 
 [dev-dependencies]
-anyhow = "1.0.44"
-opencv = "0.54.0"
-structopt = "0.3.23"
+anyhow = "1.0.75"
+opencv = "0.86.1"
+structopt = "0.3.26"
